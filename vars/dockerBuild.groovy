@@ -1,4 +1,7 @@
 def call(String project, String ImageTag, String hubUser){
+
+project = project.toLowerCase()
+    hubUser = hubUser.toLowerCase()
     
     sh """
      docker image build -t ${hubUser}/${project}:latest .
